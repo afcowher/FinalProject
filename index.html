@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page title displayed in the navbar -->
+    <title>All The Presidents!</title>
+    <!-- link  to the LESS file itself -->
+    <link rel="stylesheet/less" type="text/css" href="./less/my_styles.less" />
+    <!-- CDN script to utilize LESS -->
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <!-- defines the favicon image -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <!-- CDN links to utilize Bootstrap functionalities and icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <!-- link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- CDN script for Bootstrap functionalities -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- script link to the enabler.js file, providing functionality for the tooltips -->
+    <script src="enabler.js" defer></script>
+</head>
+<!-- stylizes the body's background color -->
+<body style="background-color: #52607C">
+    <!-- defines the navbar using Bootstrap classes for styling, as well as containing the hamburger menu functionality and modal within seperate divs -->
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container">
+            <a class="navbar-brand" data-bs-toggle="modal" data-bs-target="#reflectionsModal"><img src="images/logo.jpg"
+                    alt="Website Logo" style="width: 50px; height: 50px; border-radius: 25px" /></a>
+            <div class="modal fade" id="reflectionsModal" tabindex="-1" aria-labelled-by="reflectionsModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="reflectionsModalLabel">Welcome!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Learn more about our nation's presidents!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                style="background-color: #242424;">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quiz.html">Take The Quiz!</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1>The Presidents of the United States of America</h1>
+    <!-- defines a fluid Bootstrap container to better position elements -->
+    <div class="container-fluid">
+        <!-- defines the first row and column in the Bootstrap layout. The column occupies 6 horizontal units when the screen is at a medium viewport -->
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-body" style="text-align: center;" src="images/allpresidents.png"
+                    alt="A complete portrait of every U.S. president">
+            </div>
+            <!-- defines the carousel functionality within Bootstrap -->
+            <div class="col col-sm-10 col-md-4 carousel-area">
+                <div id="course_carousel" class="carousel carousel-light" data-bs-ride="carousel"
+                    data-bs-interval="2000">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <h2>Recent Presidents</h2>
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="images/biden.jpg" alt="Joseph R. Biden Jr." />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5
+                                    style="background-color: rgba(124, 110, 82, 0.5); border-radius: 3px; color: black;">
+                                    Joseph R. Biden Jr.</h5>
+                                <p style="background-color: rgba(124, 110, 82, 0.5); border-radius: 3px; color: black;">
+                                    2021-present</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="images/trump.jpg" alt="Donald Trump" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5
+                                    style="background-color: rgba(124, 110, 82, 0.5); border-radius: 3px; color: black;">
+                                    Donald Trump</h5>
+                                <p style="background-color: rgba(124, 110, 82, 0.5); border-radius: 3px; color: black;">
+                                    2017-2021</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="images/obama.jpg" alt="Barack Obama" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5
+                                    style="background-color: rgba(124, 110, 82, 0.5); border-radius: 3px; color: white;">
+                                    Barack Obama</h5>
+                                <p style="background-color: rgba(124, 110, 82, 0.5); border-radius: 3px; color: white;">
+                                    2009-2017</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="images/wbush.jpg" alt="George W. Bush" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5
+                                    style="background-color: rgba(124, 110, 82, 0.5); border-radius: 3px; color: black;">
+                                    George W. Bush</h5>
+                                <p style="background-color: rgba(124, 110, 82, 0.5); border-radius: 3px; color: black;">
+                                    2001-2009</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#course_carousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#course_carousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h2><u>Learn About Each President</u></h2>
+        </div>
+        <!-- row containing Bootstrap cards of all 46 presidents, with each including a Bootstrap button + tooltip giving a fun fact -->
+        <div class="row">
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>George Washington</b></div>
+                <img class="card-img" src="images/washington.jpg" alt="George Washington" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>1st</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1789-1797</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Feb. 22, 1732</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Dec. 14, 1799</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> John Adams</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Independent</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Washington was an avid dog breeder and owned over 30 hunting hounds during his lifetime.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>John Adams</b></div>
+                <img class="card-img" src="images/adams.jpg" alt="John Adams" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>2nd</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1797-1801</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Oct. 30, 1735</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> July 4, 1826</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Thomas Jefferson</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Federalist</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Adams was the first president to live in the White House, which was then known as the 'President's Palace' or 'President's House.'">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Thomas Jefferson</b></div>
+                <img class="card-img" src="images/jefferson.jpg" alt="Thomas Jefferson" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>3rd</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1801-1809</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Apr. 13, 1743</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> July 4, 1826</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Aaron Burr (1801-1805),
+                        George Clinton (1805-1809)</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic-Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Jefferson was a talented inventor and created many useful devices, including a rotating book stand and a polygraph machine (which was not related to lie detection).">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>James Madison</b></div>
+                <img class="card-img" src="images/madison.jpg" alt="James Madison" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>4th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1809-1817</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Mar. 16, 1751</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> June 28, 1836</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> George Clinton (1813-1812),
+                        Elbridge Gerry (1813-1814)</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic-Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Madison was the shortest president in U.S. history, standing at only 5 feet 4 inches tall.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>James Monroe</b></div>
+                <img class="card-img" src="images/monroe.jpg" alt="James Monroe" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>5th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1817-1825</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Apr. 28, 1758</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> July 4, 1831</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Daniel D. Tompkins</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic-Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Monroe was the last of the Founding Fathers to become president.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>John Quincy Adams</b></div>
+                <img class="card-img" src="images/quincyadams.jpg" alt="John Quincy Adams" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>6th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1825-1829</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> July 11, 1767</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Feb. 23, 1848</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> John C. Calhoun</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic-Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Adams was an accomplished linguist and spoke several languages fluently, including French, German, and Dutch.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Andrew Jackson</b></div>
+                <img class="card-img" src="images/jackson.jpg" alt="Andrew Jackson" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>7th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1829-1837</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> July 11, 1767</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Feb. 23, 1848</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> John C. Calhoun (1829-1832),
+                        Martin Van Buren (1833-1837)</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Jackson was the first president to ride on a railroad train.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Martin Van Buren</b></div>
+                <img class="card-img" src="images/vanburen.jpg" alt="Martin Van Buren" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>8th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1837-1841</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Dec. 5, 1782</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> July 24, 1862</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Richard M. Johnson</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Van Buren was the first president born after the American Revolution.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>William Henry Harrison</b></div>
+                <img class="card-img" src="images/henryharrison.jpg" alt="William Henry Harrison" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>9th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1841</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Feb. 9, 1773</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Apr. 4, 1841</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> John Tyler</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Whig</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Harrison had the shortest presidency in U.S. history, serving only 31 days before dying of pneumonia.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>John Tyler</b></div>
+                <img class="card-img" src="images/tyler.jpg" alt="John Tyler" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>10th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1841-1845</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Mar. 29, 1790</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Jan. 18, 1862</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> None</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Whig</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Tyler was the first vice president to assume the presidency due to the death of a sitting president.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>James K. Polk</b></div>
+                <img class="card-img" src="images/kpolk.jpg" alt="James K. Polk" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>11th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1845-1849</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Nov. 2, 1795</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> June 15, 1849</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> George M. Dallas</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Polk was the first president to have his photograph taken while in office.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Zachary Taylor</b></div>
+                <img class="card-img" src="images/taylor.jpg" alt="Zachary Taylor" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>12th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1849-1850</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Nov. 24, 1784</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> July 9, 1850</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Millard Fillmore</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Whig</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Taylor was a career military man who had never before held political office before becoming president.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Millard Fillmore</b></div>
+                <img class="card-img" src="images/fillmore.jpg" alt="Millard Fillmore" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>13th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1850-1853</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Jan. 7, 1800</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Mar. 8, 1874</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> None</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Whig</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Fillmore installed the first bathtub in the White House.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Franklin Pierce</b></div>
+                <img class="card-img" src="images/pierce.jpg" alt="Franklin Pierce" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>14th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1853-1857</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Nov. 23, 1804</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Oct. 8, 1869</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> William R. King (1853), None
+                        (1853-1857)</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Pierce was the first president to have a Christmas tree in the White House.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>James Buchanan</b></div>
+                <img class="card-img" src="images/buchanan.jpg" alt="James Buchanan" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>15th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1857-1861</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Apr. 23, 1791</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> June 1, 1868</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> John C. Breckinridge</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Buchanan was the only president who never married.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Abraham Lincoln</b></div>
+                <img class="card-img" src="images/lincoln.jpg" alt="Abraham Lincoln" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>16th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1861-1865</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Feb. 12, 1809</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Apr. 15, 1865</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Hannibal Hamlin (1861-1865),
+                        Andrew Johnson (1865)</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Lincoln was an accomplished wrestler and was once inducted into the Wrestling Hall of Fame.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Andrew Johnson</b></div>
+                <img class="card-img" src="images/johnson.jpg" alt="Andrew Johnson" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>17th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1865-1869</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Dec. 29, 1808</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> July 31, 1875</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> None</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Johnson was the first president to be impeached.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Ulysses S. Grant</b></div>
+                <img class="card-img" src="images/sgrant.jpg" alt="Ulysses S. Grant" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>18th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1869-1877</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Apr. 27, 1822</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> July 23, 1885</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Schuyler Colfax (1869-1873),
+                        Henry Wilson (1873-1875), None (1875-1877)</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Grant's real first name was Hiram.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Rutherford B. Hayes</b></div>
+                <img class="card-img" src="images/bhayes.jpg" alt="Rutherford B. Hayes" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>19th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1877-1881</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Oct. 4, 1822</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Jan. 17, 1893</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> William A. Wheeler</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Hayes was the first president to use a telephone while in office.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>James A. Garfield</b></div>
+                <img class="card-img" src="images/agarfield.jpg" alt="James A. Garfield" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>20th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1881</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Nov. 19, 1831</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Sep. 19, 1881</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Chester A. Arthur</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Garfield was ambidextrous and could write with both hands at the same time.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Chester A. Arthur</b></div>
+                <img class="card-img" src="images/aarthur.jpg" alt="Chester A. Arthur" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>21st</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1881-1885</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Oct. 5, 1829</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Nov. 18, 1886</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> None</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Arthur was a dapper dresser and owned over 80 pairs of pants.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Grover Cleveland</b></div>
+                <img class="card-img" src="images/cleveland.jpg" alt="Grover Cleveland" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>22nd</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1885-1889</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Mar. 18, 1837</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> June 24, 1908</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Thomas A. Hendricks</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Cleveland was the only president to serve two non-consecutive terms.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Benjamin Harrison</b></div>
+                <img class="card-img" src="images/harrison.jpg" alt="Benjamin Harrison" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>23rd</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1889-1893</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Aug. 20, 1833</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Mar. 13, 1901</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Levi P. Morton</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Harrison was the first president to have electricity in the White House.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Grover Cleveland (Again!)</b></div>
+                <img class="card-img" src="images/cleveland.jpg" alt="Grover Cleveland" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>24th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1893-1897</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Mar. 18, 1837</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> June 24, 1908</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Adlai E. Stevenson</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Cleveland's real first name was Stephen, not Grover.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>William McKinley</b></div>
+                <img class="card-img" src="images/mckinley.jpg" alt="William McKinley" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>25th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1897-1901</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Jan. 29, 1843</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Sep. 14, 1901</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Garret Hobart (1897-1899),
+                        Theodore Roosevelt (1901)</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="McKinley was the first president to ride in an automobile.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Theodore Roosevelt</b></div>
+                <img class="card-img" src="images/roosevelt.jpg" alt="Theodore Roosevelt" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>26th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1901-1909</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Oct. 27, 1858</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Jan. 6, 1919</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> None (1901-1905), Charles W.
+                        Fairbanks (1905-1909)</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Roosevelt was an avid outdoorsman and conservationist and helped establish the National Park system.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>William Howard Taft</b></div>
+                <img class="card-img" src="images/howardtaft.jpg" alt="William Howard Taft" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>27th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1909-1913</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Sep. 15, 1857</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Mar. 8, 1930</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> James S. Sherman</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Taft was the heaviest president in U.S. history, weighing over 300 pounds.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Woodrow Wilson</b></div>
+                <img class="card-img" src="images/wilson.jpg" alt="Woodrow Wilson" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>28th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1913-1921</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Dec. 28, 1856</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Feb. 3, 1924</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Thomas R. Marshall</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Wilson was the first president to attend a World Series game.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Warren G. Harding</b></div>
+                <img class="card-img" src="images/gharding.jpg" alt="Warren G. Harding" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>29th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1921-1923</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Nov. 2, 1865</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Aug. 2, 1923</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Calvin Coolidge</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Harding's dog, Laddie Boy, was the first presidential pet to receive regular press coverage.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Calvin Coolidge</b></div>
+                <img class="card-img" src="images/coolidge.jpg" alt="Calvin Coolidge" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>30th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1923-1929</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> July 4, 1872</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Jan. 5, 1933</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Charles G. Dawes</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Coolidge was known for his silence and was nicknamed 'Silent Cal.'">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Herbert Hoover</b></div>
+                <img class="card-img" src="images/hoover.jpg" alt="Herbert Hoover" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>31st</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1929-1933</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Aug. 10, 1874</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Oct. 20, 1964</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Charles Curtis</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Hoover was a talented linguist and spoke Mandarin Chinese fluently.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Franklin D. Roosevelt</b></div>
+                <img class="card-img" src="images/droosevelt.jpg" alt="Franklin D. Roosevelt" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>32nd</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1933-1945</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Jan. 30, 1882</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Apr. 12, 1945</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> John N. Garner (1933-1941),
+                        Henry A. Wallace (1941-1945), Harry S. Truman (1945)</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Roosevelt was the only president to serve more than two terms, winning four consecutive presidential elections.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Harry S. Truman</b></div>
+                <img class="card-img" src="images/struman.jpg" alt="Harry S. Truman" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>33rd</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1945-1953</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> May 8, 1884</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Dec. 26, 1972</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> None (1945-1949), Alben W.
+                        Barkley (1949-1953)</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Truman was an avid reader and could read 2,000 words per minute.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Dwight D. Eisenhower</b></div>
+                <img class="card-img" src="images/deisenhower.jpg" alt="Dwight D. Eisenhower" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>34th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1953-1961</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Oct. 14, 1890</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Mar. 28, 1969</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Richard Nixon</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Eisenhower was a skilled golfer and played over 800 rounds of golf during his presidency.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>John F. Kennedy</b></div>
+                <img class="card-img" src="images/fkennedy.jpg" alt="John F. Kennedy" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>35th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1961-1963</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> May 29, 1917</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Nov. 22, 1963</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Lyndon B. Johnson</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Kennedy was the youngest person ever to be elected president, winning the election in 1960 at the age of 43.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Lyndon B. Johnson</b></div>
+                <img class="card-img" src="images/bjohnson.jpg" alt="Lyndon B. Johnson" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>36th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1963-1969</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Aug. 27, 1908</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Jan. 22, 1973</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> None (1963-1965), Hubert
+                        Humphrey (1965-1969)</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Johnson owned a pet beagle named 'Him,' who was often seen with him in the Oval Office.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Richard Nixon</b></div>
+                <img class="card-img" src="images/nixon.jpg" alt="Richard Nixon" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>37th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1969-1974</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Jan. 9, 1913</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Apr. 22, 1994</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Spiro T. Agnew (1969-1973),
+                        Gerald Ford (1973-1974)</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Nixon was a talented musician and played the piano, violin, and accordion.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Gerald Ford</b></div>
+                <img class="card-img" src="images/ford.jpg" alt="Gerald Ford" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>38th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1974-1977</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> July 14, 1913</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Dec. 26, 2006</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Nelson Rockefeller</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Ford was a former college football star and was offered contracts by the Detroit Lions and Green Bay Packers.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Jimmy Carter</b></div>
+                <img class="card-img" src="images/carter.jpg" alt="Jimmy Carter" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>39th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1977-1981</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Oct. 1, 1924</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Walter Mondale</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Carter was the first U.S. president to be born in a hospital.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Ronald Reagan</b></div>
+                <img class="card-img" src="images/reagan.jpg" alt="Ronald Reagan" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>40th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1981-1989</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Feb. 6, 1911</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> June 5, 2004</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> George H.W. Bush</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Reagan was a Hollywood actor before becoming president, appearing in over 50 films.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>George H.W. Bush</b></div>
+                <img class="card-img" src="images/hwbush.jpg" alt="George H.W. Bush" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>41st</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1989-1993</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> June 12, 1924</p>
+                    <p class="card-text" style="text-align: center;"><b>Died:</b> Nov. 30, 2018</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Dan Quayle</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Bush was a World War II veteran and was shot down by Japanese forces during a bombing mission.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Bill Clinton</b></div>
+                <img class="card-img" src="images/clinton.jpg" alt="Bill Clinton" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>42nd</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">1989-1993</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Aug. 19, 1946</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Al Gore</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Clinton is an accomplished saxophonist and has played with famous musicians like B.B. King and Kenny G.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>George W. Bush</b></div>
+                <img class="card-img" src="images/wbush.jpg" alt="George W. Bush" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>43rd</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">2001-2009</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> July 6, 1946</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Dick Cheney</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Bush was the first president to complete a marathon, running the Houston Marathon in 1993.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Barack Obama</b></div>
+                <img class="card-img" src="images/obama.jpg" alt="Barack Obama" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>44th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">2009-2017</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Aug. 4, 1961</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Joe Biden</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Obama was a prolific writer and has written several books, including his memoir 'Dreams from My Father.'">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Donald Trump</b></div>
+                <img class="card-img" src="images/trump.jpg" alt="Donald Trump" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>45th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">2017-2021</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> June 14, 1946</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Mike Pence</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Republican</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Trump owned the Miss Universe beauty pageant from 1996 to 2015.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-5" style="width: 200px;">
+                <div class="card-header" style="text-align: center;"><b>Joe Biden</b></div>
+                <img class="card-img" src="images/biden.jpg" alt="Joe Biden" />
+                <div class="card-body">
+                    <div class="card-title" style="text-align: center;">The <b>46th</b> President of the United States
+                    </div>
+                    <p class="card-text" style="text-align: center;">2021-present</p>
+                    <p class="card-text" style="text-align: center;"><b>Born:</b> Nov. 20, 1942</p>
+                    <p class="card-text" style="text-align: center;"><b>Vice President:</b> Kamala Harris</p>
+                    <p class="card-text" style="text-align: center;"><b>Party Affiliation:</b> Democratic</p>
+                    <button class="btn btn-md d-block" style="background-color: #7C6E52;" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" title="Fun Fact"
+                        data-bs-content="Biden is a lifelong Amtrak rider and often took the train from Delaware to Washington, D.C. during his time as a senator.">
+                        <span style="margin-left: 10px">Did You Know?</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

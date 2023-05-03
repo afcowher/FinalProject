@@ -1,0 +1,24 @@
+/* images contained within the carousel occupy an automatic width and height */
+.carousel-item img {
+    width: auto;
+    height: auto;
+}
+/* all h1 headings utilize a specific font family with bolder text and text aligned in the center of the screen */
+h1 {
+    text-align: center;
+    font-family: Goudy Old Style, fantasy;
+    font-weight: bolder;
+}
+/* all h2 headings utilize a specific font family with bolder text and text aligned in the center of the screen */
+h2 {
+    font-family: Goudy Old Style, fantasy;
+    font-weight: bolder;
+    text-align: center;
+}
+/* img tags with class img-body occupy an automatic width and height, a max-width property of 100%, and a relative position to the rest of the page */
+.img-body {
+    width:auto;
+    height: auto;
+    max-width: 100%;
+    position: relative;
+}
